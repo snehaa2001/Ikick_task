@@ -1,0 +1,70 @@
+<div class="profile-update-container">
+<div class="side-nav">
+        <div class="logo">
+          <img [src]="page.image">
+        </div>
+        <ul class="nav-list">
+          <li>
+            <a routerLink="/home">
+              <i class="fas fa-home"></i> Home
+            </a>
+          </li>
+          <li>
+            <a routerLink="/search">
+              <i class="fas fa-search"></i> Search
+            </a>
+          </li>
+          <li>
+            <a routerLink="/explore">
+              <i class="fas fa-compass"></i> Explore
+            </a>
+          </li>
+          <li>
+            <a routerLink="/messages">
+              <i class="fas fa-envelope"></i> Messages
+            </a>
+          </li>
+          <li>
+            <a routerLink="/notifications">
+              <i class="fas fa-bell"></i> Notifications
+            </a>
+          </li>
+          <li>
+            <a routerLink="/create">
+              <i class="fas fa-plus"></i> Create
+            </a>
+          </li>
+          <li>
+            <a routerLink="/profile">
+              <i class="fas fa-user"></i> Profile
+            </a>
+          </li>
+        </ul>
+    
+      </div>
+   
+      <div class="profile">
+        <div class="profile-container">
+          <img [src]="profileImage" alt="Profile Image">
+          <figure class="image-container">
+            <span class="add-profile">+</span>
+          </figure>
+          <span class="user-name">Sneha_mohan</span>
+        </div>
+      </div>
+    
+      <div class="bio-container">
+        <p class="bio" id="bio">{{ bio }}</p>
+        <button id="edit-bio-btn" (click)="showUpdatePopup()">Update</button>
+        <button id="edit-bio-btn1"(click)="skipUpdate()" >Skip</button>
+      </div>
+    </div>
+    
+    <div class="popup" *ngIf="isUpdatePopupVisible">
+      <textarea [(ngModel)]="newBio" placeholder="Update your bio"></textarea>
+      <br>
+      <label>Update your profile image</label>
+      <input type="file" (change)="onFileSelected($event)" accept="image/*">
+      <button (click)="updateBioAndPicture()">Save</button>
+      <button (click)="cancelUpdate()">Cancel</button>
+    </div>

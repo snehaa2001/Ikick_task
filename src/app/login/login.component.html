@@ -1,0 +1,31 @@
+<div class="fullDiv">
+    <div class="center-background"></div> 
+    <div class="center-content">
+      <div class="innerRight">
+        <div class="innerLeft">
+        
+          <div class="innerLeftBlurred"></div>
+        </div>
+      </div>
+      <div class="account-wall">
+        <div class="form-signin">
+          
+          <form>
+            <h2 class="login-title">Login</h2>
+            <input type="text" id="username" name="username" class="form-control" placeholder="Username" required [(ngModel)]="username">
+            <input type="password" id="password" name="password" class="form-control" placeholder="Password" required [(ngModel)]="password">
+            <button type="button" class="sign-in" (click)="onLogin()">LOGIN</button>
+          </form>
+          <br>
+          <div class="links">
+            new user?
+            <a routerLink="/signup">Sign Up</a>
+            <br>
+       
+            <a routerLink="/forgot-password">Forgot Password</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

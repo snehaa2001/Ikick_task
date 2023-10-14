@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+.fullDiv {
+  
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 200%;
+  font-family: 'Oswald', sans-serif;
+}
+
+.center-background {
+  position: absolute;
+  opacity: 0.8;
+  background-color: #202020;
+  width: 480px;
+  height: 700px;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.center-content {
+  position: absolute;
+  top: 25%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+  width: 480px;
+  height: 540px;
+  color:#fff;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.login-title {
+  color: white;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 300;
+  display: block;
+  height: 40px;
+  color: rgb(21, 140, 186);
+  border-radius: 5px;
+}
+
+.form-signin input[type="text"] {
+  margin-bottom: 15px;
+  width: 350px;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 20px;
+  width: 350px;
+}
+
+.form-signin button {
+  background-color: #0560c2;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-signin button:hover {
+  background-color: #0056b3;
+}
+
+.links {
+  color: #fff;
+}
+
+.links a {
+  color: #fff;
+}
+
+
+@media (max-width: 767px) {
+  .center-background {
+    width: 90%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  .center-content {
+    width: 90%;
+    max-width: 90%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .form-signin {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .form-signin input[type="text"],
+  .form-signin input[type="password"] {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .center-background {
+    width: 80%;
+    max-width: 80%;
+    height: 80%;
+  }
+
+  .center-content {
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .form-signin {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .form-signin input[type="text"],
+  .form-signin input[type="password"] {
+    width: 100%;
+    max-width: 100%;
+  }
+}
