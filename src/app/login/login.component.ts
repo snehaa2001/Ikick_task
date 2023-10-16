@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormsModule } from '@angular/forms'; 
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -10,14 +10,14 @@ import { FormsModule } from '@angular/forms';
 export class LoginComponent {
   username: string = '';
   password: string = '';
+  formSubmitted: boolean = false; 
 
   constructor(private router: Router) {}
 
-  onLogin() {
-    if (this.isValidCredentials()) {
+  onLogin(loginForm: NgForm) {
+    this.formSubmitted = true; 
+    if (loginForm.valid && this.isValidCredentials()) {
       this.router.navigate(['/home']);
-    } else {
-      window.alert('Invalid credentials. Please enter both username and password.');
     }
   }
 

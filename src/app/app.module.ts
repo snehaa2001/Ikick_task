@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms'; // Import FormsModule
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component'; // Make sure to import your SignupComponent
@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import { ProfileupdateComponent } from './profileupdate/profileupdate.component';
 import { OtpVerificationComponent } from './otp-verification/otp-verification.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,13 +21,15 @@ import { OtpVerificationComponent } from './otp-verification/otp-verification.co
     ForgotPasswordComponent,
     HomeComponent,
     ProfileupdateComponent,
-    OtpVerificationComponent
+    OtpVerificationComponent,
+
   ],
   imports: [
     BrowserModule,
     FormsModule, 
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
